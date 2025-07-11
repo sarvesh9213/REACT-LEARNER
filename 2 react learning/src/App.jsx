@@ -1,8 +1,8 @@
-import Mybutton from "./mybutton";  
+import {Mybutton} from "./mybutton";  
 function App(){
 return <div>
 <h1>
-   hello sarvesh 
+   hello sarvesh
 </h1>
  <Mybutton></Mybutton>
 </div>
