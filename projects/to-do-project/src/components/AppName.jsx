@@ -1,7 +1,7 @@
 import React from "react";
 
 function AppName() {
-  return <h1>To Do App</h1>;
+  return <h1 className=".app-title">To-Do App</h1>;
 }
 
 export default AppName;
