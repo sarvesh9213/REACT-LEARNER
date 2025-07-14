@@ -1,6 +1,24 @@
 h1 {
-  font-weight: 900 !important;
-  font-size: 40px !important;
+  font-weight: 1000!important;
+  font-size: 50px !important;
   margin: 30px;
   margin-bottom: 30px !important;
+  margin-top: 10px !important;
+}
+input{
+  width: 100%;
+}
+.todo-items {
+  text-align: left;
+}
+.my-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+.mybutton{
+ min-width: 90px;
+
 }
