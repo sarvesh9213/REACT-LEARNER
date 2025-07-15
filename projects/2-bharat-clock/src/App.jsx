@@ -1,10 +1,16 @@
+import Clockheading from "./COMPONENTS/clockheading";
+import Clockslogan from "./COMPONENTS/Clockslogan";
+import Currenttime from "./COMPONENTS/Currenttime";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    <div>
-      <h1>Bharat Clock</h1>
-    </div>
+    <center>
+      <Clockheading />
+      <Clockslogan />
+      <Currenttime />
+    </center>
   );
 }
 
