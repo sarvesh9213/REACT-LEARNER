@@ -8,7 +8,7 @@ function App() {
   let foods = ["Fruits", "Vegetables", "Grains", "Protein Foods", "Dairy"];
   return (
     <>
-      <h1 className="fst-italic">HEALTHY FOODS</h1>
+      <h1 className="heading">HEALTHY FOODS</h1>
       <Errormessagepackage sarvesh={foods}></Errormessagepackage>
       <Fooditems sarvesh={foods}></Fooditems>
     </>
