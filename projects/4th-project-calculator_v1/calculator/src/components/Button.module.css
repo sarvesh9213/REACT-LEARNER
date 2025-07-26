@@ -1,0 +1,14 @@
+.button {
+  width: 45px;
+  height: 45px;
+  margin: 4px;
+  flex: 1;
+  /* flex 1 fills the available space */
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+ }
