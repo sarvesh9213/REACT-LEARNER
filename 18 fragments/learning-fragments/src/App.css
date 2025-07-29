@@ -1,8 +1,73 @@
-
-
 .heading {
   text-align: center;
-  color: #1eb423;
-  font-size: 2em;
+  color: #2e7d32;
+  font-size: 2.2em;
   margin-top: 20px;
+  margin-bottom: 25px;
+  
+  /* Natural Typography */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  
+  /* Subtle Animation */
+  animation: fadeInGently 1.2s ease-out;
+  
+  /* Natural Shadow */
+  text-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+  
+  /* Smooth Transitions */
+  transition: all 0.3s ease;
+  cursor: default;
+  
+  /* Clean Spacing */
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Gentle Entrance Animation */
+@keyframes fadeInGently {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simple Hover Effect */
+.heading:hover {
+  color: #1b5e20;
+  transform: translateY(-2px);
+  text-shadow: 0 4px 8px rgba(46, 125, 50, 0.25);
+}
+
+/* Optional: Subtle underline accent */
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4caf50, transparent);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+  }
 }

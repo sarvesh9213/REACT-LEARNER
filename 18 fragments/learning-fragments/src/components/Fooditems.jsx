@@ -3,8 +3,8 @@ let Fooditems = ({ sarvesh }) => {
   return (
     <>
       <ul className="list-group">
-        {sarvesh.map((itemkaaaaa) => (
-          <Itemiii key={itemkaaaaa} foods={itemkaaaaa}></Itemiii>
+        {sarvesh.map((item) => (
+          <Itemiii key={item} khana={item}></Itemiii>
         ))}
         {/* this item or items/ itemaxy anything is not nessary */}
       </ul>

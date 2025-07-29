@@ -5,13 +5,66 @@
   padding: 15px 250px;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
   font-size: 16px;
-  margin: 4px 2px; /*but it is important for the between the items gap*/
+  margin: 4px 2px;
   cursor: pointer;
+  
+  /* Animation properties */
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
+
+.sarvesh-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.sarvesh-button:hover {
+  /* Pop up effect */
+  transform: translateY(-8px);
+  
+  /* Enhanced shadow for depth */
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+  
+  /* Slightly brighter green */
+  background-color: #45a049;
+  
+  /* Scale effect */
+  transform: translateY(-8px) scale(1.02);
+}
+
+.sarvesh-button:hover::before {
+  /* Shimmer effect on hover */
+  left: 100%;
+}
+
+.sarvesh-button:active {
+  /* Click effect */
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
 .sarveshSpan {
   font-weight: bold;
   color: #fff;
   font-size: 1.2em;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.sarvesh-button:hover .sarveshSpan {
+  /* Text animation on hover */
+  transform: scale(1.05);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

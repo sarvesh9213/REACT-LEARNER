@@ -1,0 +1,14 @@
+.Container{
+  border : 2px solid rgba(0, 0, 0, 0.158);
+  border-radius: 10px;
+  margin : 80px ;
+  padding : 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #e8f800;
+  /* Centering the content */
+  display: grid ; 
+  min-width: fit-content;
+  place-items: center;
+  /* Responsive design */
+  
+}
