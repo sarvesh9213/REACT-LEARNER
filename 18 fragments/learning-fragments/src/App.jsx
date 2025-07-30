@@ -4,6 +4,7 @@ import "./App.css";
 import Fooditems from "./components/Fooditems";
 import Errormessagepackage from "./components/Erromessage";
 import Container from "./components/Container";
+import FoodInput from "./components/Foodinput";
 
 function App() {
   let foods = ["Fruits", "Vegetables", "Grains", "Protein Foods", "Dairy"];
@@ -12,6 +13,7 @@ function App() {
       <Container asdf="sdbvdfsdf">
         <h1 className="heading">HEALTHY FOODS</h1>
         <Errormessagepackage sarvesh={foods}></Errormessagepackage>
+        <FoodInput></FoodInput>
         <Fooditems sarvesh={foods}></Fooditems>
       </Container>
       {/* <Container>
