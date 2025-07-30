@@ -2,7 +2,10 @@
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 250px;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -67,4 +70,59 @@
   /* Text animation on hover */
   transform: scale(1.05);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* New button styles */
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  margin-left: 10px;
+  
+  /* Animation properties matching the main button */
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0.2s);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.button:hover {
+  /* Pop up effect */
+  transform: translateY(-4px) scale(1.05);
+  
+  /* Enhanced shadow for depth */
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  
+  /* Slightly brighter green */
+  background-color: #45a049;
+}
+
+.button:hover::before {
+  /* Shimmer effect on hover */
+  left: 100%;
+}
+
+.button:active {
+  /* Click effect */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
