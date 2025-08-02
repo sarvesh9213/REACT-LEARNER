@@ -8,19 +8,23 @@ import FoodInput from "./components/Foodinput";
 import { useState } from "react";
 
 function App() {
-  let [foods, setFoods] = useState(["Fruits", "Vegetables", "Grains"]);
-  const [texttoShow, setTextToShow] = useState("healthy foods");
-  const handlekeydown = (event) => {
-    console.log(event);
-    setTextToShow(event.target.value); // Update the text to show based on input
+  let [foods, setFoods] = useState([" Proteins", "Dairy"]);
+
+  const onkeydown = (event) => {
+    if (event.key == "Enter") {
+      let newfoods = event.target.value;
+      event.target.value = "";
+      let newfoodsitems = [...foods, newfoods];
+      setFoods(newfoodsitems);
+    }
   };
   return (
     <>
       <Container asdf="sdbvdfsdf">
         <h1 className="heading">HEALTHY FOODS</h1>
         <Errormessagepackage sarvesh={foods}></Errormessagepackage>
-        <FoodInput handleOnChange={handlekeydown}></FoodInput>
-        <p className="text">{texttoShow}</p>
+        <FoodInput handleKeydown={onkeydown}></FoodInput>
+
         <Fooditems sarvesh={foods}></Fooditems>
       </Container>
       {/* <Container>
