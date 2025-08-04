@@ -27,9 +27,6 @@ function App() {
 
         <Fooditems sarvesh={foods}></Fooditems>
       </Container>
-      {/* <Container>
-        <p>heyyyyyyyyyyyyyyyyyyyyyyyyyyyy nvdsjnvdsnjv</p>
-      </Container> */}
     </>
   );
 }
