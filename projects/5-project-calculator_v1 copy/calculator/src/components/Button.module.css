@@ -1,0 +1,46 @@
+.button {
+  width: 45px;
+  height: 45px;
+  margin: 4px;
+  flex: 1;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  /* Enhanced transition properties */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  /* Pop-up effect */
+  transform: translateY(-4px);
+  
+  /* Enhanced shadow for depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+  /* Subtle color change */
+  background-color: #45a049;
+  
+  /* Slight scale increase for emphasis */
+  transform: translateY(-4px) scale(1.05);
+}
+
+.button:active {
+  /* Pressed state */
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s ease;
+}
+
+/* Optional: Add a subtle glow effect */
+.button:hover {
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(76, 175, 80, 0.3);
+}

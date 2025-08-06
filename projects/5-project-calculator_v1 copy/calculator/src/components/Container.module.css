@@ -1,0 +1,9 @@
+.button-container{
+  display: flex;
+  justify-content: center ;
+  flex-wrap: wrap; 
+  /* flex wrap aap ka decide kerta hai ki buttons ek line mein aayenge ya multiple lines mein */
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* gap: 10px; */
+ }
+ 
