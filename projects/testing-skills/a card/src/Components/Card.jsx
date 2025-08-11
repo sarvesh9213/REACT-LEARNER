@@ -1,12 +1,18 @@
 import styles from "./Card.module.css";
-const Card = () => {
+import Items from "./Items";
+const Card = ({ productsname }) => {
   {
     return (
-      <div className="card">
-        <div>name</div>
-        <div>discription</div>
-        <div>price</div>
-        <button>buy</button>
+      // In your Card component, structure it like this:
+      <div className={styles.card}>
+        {productsname.map((product) => (
+          <Items
+            key={product.name}
+            names={product.name}
+            discriptions={product.discription}
+            prices={product.price}
+          ></Items>
+        ))}
       </div>
     );
   }
