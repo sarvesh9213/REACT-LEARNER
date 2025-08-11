@@ -1,13 +1,16 @@
-const Items = ({ names, discriptions, prices }) => {
+const Items = ({ name, description, price }) => {
   return (
-    <>
-      <div>{names}</div>
-      <div>{discriptions}</div>
-      <div className="card-bottom">
-        <div>{prices}</div>
-        <button>Buy</button>
+    <div>
+      <div className="product-info">
+        <div>{name}</div>
+        <div>{description}</div>
       </div>
-    </>
+      <div className="card-bottom">
+        <div className="price">{price}</div>
+        <button className="buy-button">Buy</button>
+      </div>
+    </div>
   );
 };
+
 export default Items;

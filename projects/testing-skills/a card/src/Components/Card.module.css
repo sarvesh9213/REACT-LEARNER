@@ -1,73 +1,48 @@
 .card {
-  background: linear-gradient(135deg, 
-    rgba(34, 197, 94, 0.2) 0%, 
-    rgba(16, 185, 129, 0.1) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: 20px;
-  padding: 24px;
-  width: 280px;
-  min-height: 380px;
-  box-shadow: 
-    0 8px 32px rgba(34, 197, 94, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  background-color: #c8e6c9;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Name */
-.card > div:first-child {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #065f46;
-  margin-bottom: 16px;
-  text-align: center;
+.cardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-/* Description - smaller */
-.card > div:nth-child(2) {
-  color: #064e3b;
-  font-weight: 400; /* Reduced from 500 */
-  font-size: 0.9rem; /* Smaller text */
-  line-height: 1.4;
-  margin-bottom: auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+.card .product-info {
   flex-grow: 1;
 }
 
-/* Bottom container for price and button */
-.card-bottom {
+.card .card-bottom {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Price - bottom left */
-.card > div:nth-child(3) {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #059669;
-  margin: 0; /* Remove margin */
+.card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Button - smaller, bottom right */
-.card button {
-  background: linear-gradient(135deg, #10b981, #059669);
-  border: none;
-  border-radius: 6px;
-  padding: 8px 12px; /* Much smaller */
+.card .buy-button {
+  background-color: #4caf50;
   color: white;
-  font-weight: 600;
-  font-size: 0.8rem; /* Smaller font */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  width: auto; /* Auto width */
-  min-width: 60px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  font-weight: bold;
 }
 
+.card .buy-button:hover {
+  background-color: #45a049;
+}
