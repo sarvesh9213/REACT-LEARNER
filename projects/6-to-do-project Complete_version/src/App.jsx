@@ -5,7 +5,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [todoItems, settodoItems] = useState([
+  intialtodoItems = [
     {
       name: "Buy Milk",
       dueDate: "4/10/2023",
@@ -18,7 +18,11 @@ function App() {
       name: "Like this video",
       dueDate: "right now",
     },
-  ]); /* these are basically some examples in which we have created an object in the arrays sarvesh babu */
+  ];
+  const [todoItems, settodoItems] =
+    useState(
+      intialtodoItems
+    ); /* these are basically some examples in which we have created an object in the arrays sarvesh babu */
   const onkeydown = (event) => {
     if (event.key === "Enter") {
       const newTodo = {
