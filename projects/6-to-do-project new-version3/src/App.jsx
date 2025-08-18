@@ -18,7 +18,7 @@ function App() {
       dueDate: "right now",
     },
   ];
-  /* these are basically some examples in which we have created an object in the arrays sarvesh babu */
+ const 
 
   return (
     <center className="todo-container">
