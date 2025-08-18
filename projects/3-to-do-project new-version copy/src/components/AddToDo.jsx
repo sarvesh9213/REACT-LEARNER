@@ -1,14 +1,10 @@
 import styles from "./AddToDo.module.css";
-function AddTodo({ onkeydown, changeDueDate }) {
+function AddTodo() {
   return (
     <div className="container text-center ">
       <div className={"row kg-row ${styles.inputContainer}"}>
         <div className="col-6">
-          <input
-            type="text"
-            placeholder="Enter Todo Here"
-            onKeyDown={onkeydown}
-          />
+          <input type="text" placeholder="Enter Todo Here" />
         </div>
         <div className="col-4">
           <input type="date" />
