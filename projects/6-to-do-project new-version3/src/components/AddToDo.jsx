@@ -9,6 +9,13 @@ function AddTodo({ OnNewItem }) {
   const handleDateChange = (event) => {
     setTodoDate(event.target.value);
   };
+
+  const handleAddClick = () => {
+    OnNewItem(todoName, todoDate);
+    setTodoName();
+    setTodoDate();
+  };
+
   return (
     <div className="container text-center ">
       <div className={"row kg-row ${styles.inputContainer}"}>
@@ -26,7 +33,7 @@ function AddTodo({ OnNewItem }) {
           <button
             type="button"
             className="btn btn-success kg-button"
-            onClick={() => OnNewItem("Sample Todo", "2023-10-04")}
+            onClick={handleAddClick}
           >
             Add
           </button>
