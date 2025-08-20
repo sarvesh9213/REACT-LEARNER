@@ -1,13 +1,23 @@
 import styles from "./AddToDo.module.css";
 function AddTodo({ OnNewItem }) {
+  const handleNameChange = (event) => {
+    console.log("Name changed:", event.target.value);
+  };
+  const handleDateChange = (event) => {
+    console.log("Date changed:", event.target.value);
+  };
   return (
     <div className="container text-center ">
       <div className={"row kg-row ${styles.inputContainer}"}>
         <div className="col-6">
-          <input type="text" placeholder="Enter Todo Here" />
+          <input
+            type="text"
+            placeholder="Enter Todo Here"
+            onChange={handleNameChange}
+          />
         </div>
         <div className="col-4">
-          <input type="date" />
+          <input type="date" onChange={handleDateChange} />
         </div>
         <div className="col-2">
           <button
