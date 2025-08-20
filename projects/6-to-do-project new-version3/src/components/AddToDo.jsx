@@ -1,10 +1,13 @@
 import styles from "./AddToDo.module.css";
+import React, { useState } from "react";
 function AddTodo({ OnNewItem }) {
+  const [todoName, setTodoName] = useState("");
+  const [todoDate, setTodoDate] = useState("");
   const handleNameChange = (event) => {
-    console.log("Name changed:", event.target.value);
+    setTodoName(event.target.value);
   };
   const handleDateChange = (event) => {
-    console.log("Date changed:", event.target.value);
+    setTodoDate(event.target.value);
   };
   return (
     <div className="container text-center ">
