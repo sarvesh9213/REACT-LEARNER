@@ -1,5 +1,6 @@
 import styles from "./AddToDo.module.css";
 import React, { useState } from "react";
+import { IoAddCircleOutline } from "react-icons/io5";
 function AddTodo({ OnNewItem }) {
   const [todoName, setTodoName] = useState(``);
   const [todoDate, setTodoDate] = useState(``);
@@ -35,7 +36,7 @@ function AddTodo({ OnNewItem }) {
             className="btn btn-success kg-button"
             onClick={handleAddClick}
           >
-            Add
+            <IoAddCircleOutline />
           </button>
         </div>
       </div>
