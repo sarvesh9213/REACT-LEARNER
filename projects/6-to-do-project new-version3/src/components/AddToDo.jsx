@@ -19,7 +19,7 @@ function AddTodo({ OnNewItem }) {
 
   return (
     <div className="container text-center ">
-      <div className={"row kg-row ${styles.inputContainer}"}>
+      <form className={"row kg-row ${styles.inputContainer}"}>
         <div className="col-6">
           <input
             type="text"
@@ -39,7 +39,7 @@ function AddTodo({ OnNewItem }) {
             <IoAddCircleOutline />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
