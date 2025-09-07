@@ -28,7 +28,7 @@ function AddTodo({ OnNewItem }) {
           />
         </div>
         <div className="col-2">
-          <input type="date" onChange={handleDateChange} />
+          <input type="text" onChange={handleDateChange} />
         </div>
         <div className="col-2">
           <button
