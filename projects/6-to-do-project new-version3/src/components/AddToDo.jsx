@@ -27,7 +27,7 @@ function AddTodo({ OnNewItem }) {
             onChange={handleNameChange}
           />
         </div>
-        <div className="col-4">
+        <div className="col-2">
           <input type="date" onChange={handleDateChange} />
         </div>
         <div className="col-2">
