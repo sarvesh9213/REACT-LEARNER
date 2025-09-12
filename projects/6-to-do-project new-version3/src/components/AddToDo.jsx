@@ -11,7 +11,8 @@ function AddTodo({ OnNewItem }) {
     setTodoDate(event.target.value);
   };
 
-  const handleAddClick = () => {
+  const handleAddClick = (event) => {
+    event.preventdefault();
     OnNewItem(todoName, todoDate);
     setTodoName();
     setTodoDate();
@@ -19,7 +20,10 @@ function AddTodo({ OnNewItem }) {
 
   return (
     <div className="container text-center ">
-      <form className={"row kg-row ${styles.inputContainer}"}>
+      <form
+        className={"row kg-row ${styles.inputContainer}"}
+        onsubmit={handleAddClick}
+      >
         <div className="col-6">
           <input
             type="text"
@@ -31,11 +35,7 @@ function AddTodo({ OnNewItem }) {
           <input type="date" onChange={handleDateChange} />
         </div>
         <div className="col-2">
-          <button
-            type="button"
-            className="btn btn-success kg-button"
-            onClick={handleAddClick}
-          >
+          <button type="submit" className="btn btn-success kg-button">
             <IoAddCircleOutline />
           </button>
         </div>
