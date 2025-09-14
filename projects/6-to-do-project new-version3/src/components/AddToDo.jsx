@@ -35,7 +35,7 @@ function AddTodo({ OnNewItem }) {
           <input type="date" onChange={handleDateChange} />
         </div>
         <div className="col-2">
-          <button type="submit" className="btn btn-success kg-button">
+          <button type="button" className="btn btn-success kg-button">
             <IoAddCircleOutline />
           </button>
         </div>
