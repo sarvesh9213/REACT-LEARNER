@@ -2,23 +2,16 @@ import styles from "./AddToDo.module.css";
 import React, { useState, useRef } from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
 function AddTodo({ OnNewItem }) {
-  const [todoName, setTodoName] = useState(``);
-  const [todoDate, setTodoDate] = useState(``);
-  const noofupdate = useRef(0);
-  const handleNameChange = (event) => {
-    setTodoName(event.target.value);
-    noofupdate.current += 1;
-  };
-  const handleDateChange = (event) => {
-    setTodoDate(event.target.value);
-    console.log(`no. of updates : ${noofupdate.current}`);
-  };
+  const todoNameElement = useRef();
+  const dueDateElement = useRef();
 
   const handleAddClick = (event) => {
     event.preventdefault();
+    const todoName = todoNameElement.current.value;
+    const todoDate = dueDateElement.current.value;
+    todoNameElement.current.value = "";
+    dueDateElement.current.value = "";
     OnNewItem(todoName, todoDate);
-    setTodoName();
-    setTodoDate();
   };
 
   return (
@@ -31,11 +24,11 @@ function AddTodo({ OnNewItem }) {
           <input
             type="text"
             placeholder="Enter Todo Here"
-            onChange={handleNameChange}
+            ref={todoNameElement}
           />
         </div>
         <div className="col-2">
-          <input type="date" onChange={handleDateChange} />
+          <input type="date" ref={dueDateElement} />
         </div>
         <div className="col-2">
           <button type="submit" className="btn btn-success kg-button">
