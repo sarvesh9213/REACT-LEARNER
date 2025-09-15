@@ -1,14 +1,17 @@
 import styles from "./AddToDo.module.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
 function AddTodo({ OnNewItem }) {
   const [todoName, setTodoName] = useState(``);
   const [todoDate, setTodoDate] = useState(``);
+  const noofupdate = useRef(0);
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
+    noofupdate.current += 1;
   };
   const handleDateChange = (event) => {
     setTodoDate(event.target.value);
+    console.log(`no. of updates : ${noofupdate.current}`);
   };
 
   const handleAddClick = (event) => {
