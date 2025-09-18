@@ -9,10 +9,17 @@ function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
   const handleNewitem = (itemName, itemDate) => {
-    setTodoItems((currValue) => [
-      ...currValue,
-      { name: itemName, dueDate: itemDate },
-    ]);
+    setTodoItems((currValue) => {
+      const newtodoitems = [
+        ...currValue,
+        { name: itemName, dueDate: itemDate },
+      ];
+      return newtodoitems;
+    });
+    // setTodoItems((currValue) => [
+    //   ...currValue,
+    //   { name: itemName, dueDate: itemDate },
+    // ]);
   };
 
   const handleDeleteButton = (dltItemName) => {
