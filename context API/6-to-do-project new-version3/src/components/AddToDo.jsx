@@ -6,7 +6,7 @@ function AddTodo({ OnNewItem }) {
   const dueDateElement = useRef();
 
   const handleAddClick = (event) => {
-    event.preventdefault();
+    event.preventDefault();
     const todoName = todoNameElement.current.value;
     const todoDate = dueDateElement.current.value;
     todoNameElement.current.value = "";
@@ -17,8 +17,8 @@ function AddTodo({ OnNewItem }) {
   return (
     <div className="container text-center ">
       <form
-        className={"row kg-row ${styles.inputContainer}"}
-        onsubmit={handleAddClick}
+        className={`row kg-row ${styles.inputContainer}`}
+        onSubmit={handleAddClick}
       >
         <div className="col-6">
           <input
