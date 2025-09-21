@@ -31,7 +31,7 @@ function App() {
     <center className="todo-container">
       <AppName />
       <AddTodo OnNewItem={handleNewitem} />
-      {todoItems.length === 0 && <Welcome></Welcome>}
+      <Welcome todoItems={todoItems}></Welcome>
       <TodoItems
         todoItems={todoItems}
         onDeleteclick={handleDeleteButton}
