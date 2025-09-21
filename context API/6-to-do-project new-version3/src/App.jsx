@@ -4,6 +4,7 @@ import TodoItems from "./components/TodoItems";
 import "./App.css";
 import { useState } from "react";
 import Welcome from "./components/Welcome";
+import { TodoItemsContext } from "./store/todo-items-store";
 
 function App() {
   const initialtodoItems = [];
@@ -28,16 +29,18 @@ function App() {
   };
 
   return (
-    <center className="todo-container">
-      <AppName />
-      <AddTodo OnNewItem={handleNewitem} />
-      <Welcome todoItems={todoItems}></Welcome>
-      <TodoItems
-        todoItems={todoItems}
-        onDeleteclick={handleDeleteButton}
-      ></TodoItems>
-      {/* we are passing the todoItems as a prop to the TodoItems component */}
-    </center>
+    <TodoItemsContext.Provider>
+      <center className="todo-container">
+        <AppName />
+        <AddTodo OnNewItem={handleNewitem} />
+        <Welcome todoItems={todoItems}></Welcome>
+        <TodoItems
+          todoItems={todoItems}
+          onDeleteclick={handleDeleteButton}
+        ></TodoItems>
+        {/* we are passing the todoItems as a prop to the TodoItems component */}
+      </center>
+    </TodoItemsContext.Provider>
   );
 }
 
