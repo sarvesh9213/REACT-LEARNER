@@ -5,6 +5,7 @@ import styles from "./TodoItems.module.css";
 
 const TodoItems = ({ todoItems, onDeleteclick }) => {
   const TodoItemsFromContext = useContext([TodoItemsContext]);
+  console.log(`items from context : ${TodoItemsFromContext}`);
   return (
     <div className={styles.itemsContainer}>
       {todoItems.map((item) => (
