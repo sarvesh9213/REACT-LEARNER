@@ -30,7 +30,7 @@ function App() {
   const defaultToDoItems = [{ name: "buy protien", dueDate: "today" }];
 
   return (
-    <TodoItemsContext.Provider vlaue={[defaultToDoItems]}>
+    <TodoItemsContext.Provider value={defaultToDoItems}>
       <center className="todo-container">
         <AppName />
         <AddTodo OnNewItem={handleNewitem} />

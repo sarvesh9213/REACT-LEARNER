@@ -3,9 +3,8 @@ import { TodoItemsContext } from "../store/todo-items-store";
 import TodoItem from "./TodoItem";
 import styles from "./TodoItems.module.css";
 
-const TodoItems = ({ todoItems, onDeleteclick }) => {
-  const TodoItemsFromContext = useContext([TodoItemsContext]);
-  console.log(`items from context : ${TodoItemsFromContext}`);
+const TodoItems = ({ onDeleteclick }) => {
+  const todoItems = useContext(TodoItemsContext);
   return (
     <div className={styles.itemsContainer}>
       {todoItems.map((item) => (
