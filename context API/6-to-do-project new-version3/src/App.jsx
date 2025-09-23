@@ -10,9 +10,9 @@ function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
   const handleNewitem = (itemName, itemDate) => {
-    setTodoItems((currValue) => {
+    setTodoItems((currrryValue) => {
       const newtodoitems = [
-        ...currValue,
+        ...currrryValue,
         { name: itemName, dueDate: itemDate },
       ];
       return newtodoitems;
