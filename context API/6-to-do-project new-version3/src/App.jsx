@@ -34,11 +34,8 @@ function App() {
       <center className="todo-container">
         <AppName />
         <AddTodo OnNewItem={handleNewitem} />
-        <Welcome todoItems={todoItems}></Welcome>
-        <TodoItems
-          todoItems={todoItems}
-          onDeleteclick={handleDeleteButton}
-        ></TodoItems>
+        <Welcome></Welcome>
+        <TodoItems onDeleteclick={DeleteItem}></TodoItems>
         {/* we are passing the todoItems as a prop to the TodoItems component */}
       </center>
     </TodoItemsContext.Provider>
