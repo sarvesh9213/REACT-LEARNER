@@ -9,7 +9,7 @@ import { TodoItemsContext } from "./store/todo-items-store";
 function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
-  const handleNewitem = (itemName, itemDate) => {
+  const addNewItem = (itemName, itemDate) => {
     setTodoItems((currrryValue) => {
       const newtodoitems = [
         ...currrryValue,
@@ -23,7 +23,7 @@ function App() {
     // ]);
   };
 
-  const handleDeleteButton = (dltItemName) => {
+  const DeleteItem = (dltItemName) => {
     const newtodoitems = todoItems.filter((item) => item.name !== dltItemName);
     setTodoItems(newtodoitems);
   };
