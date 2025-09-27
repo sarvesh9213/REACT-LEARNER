@@ -32,7 +32,7 @@ function App() {
     <TodoItemsContext.Provider value={todoItems}>
       <center className="todo-container">
         <AppName />
-        <AddTodo OnNewItem={handleNewitem} />
+        <AddTodo OnNewItem={addNewItem} />
         <Welcome></Welcome>
         <TodoItems onDeleteclick={DeleteItem}></TodoItems>
         {/* we are passing the todoItems as a prop to the TodoItems component */}
