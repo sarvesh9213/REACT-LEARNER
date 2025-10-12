@@ -1,17 +1,18 @@
 import styles from "./AddToDo.module.css";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { IoAddCircleOutline } from "react-icons/io5";
-function AddTodo({ OnNewItem }) {
+import { TodoItemsContext } from "../store/todo-items-store";
+function AddTodo() {
   const todoNameElement = useRef();
   const dueDateElement = useRef();
-
+  const { addNewItem } = useContext(TodoItemsContext);
   const handleAddClick = (event) => {
     event.preventDefault();
     const todoName = todoNameElement.current.value;
     const todoDate = dueDateElement.current.value;
     todoNameElement.current.value = "";
     dueDateElement.current.value = "";
-    OnNewItem(todoName, todoDate);
+    addNewItem(todoName, todoDate);
   };
 
   return (
