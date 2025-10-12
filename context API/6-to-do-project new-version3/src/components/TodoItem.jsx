@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { TodoItemsContext } from "../store/todo-items-store";
 import { RiDeleteBin6Line } from "react-icons/ri";
-function TodoItem({ todoName, todoDate, onDeleteclick }) {
+function TodoItem({ todoName, todoDate }) {
+  const { DeleteItem } = useContext(TodoItemsContext);
   return (
     <div className="container">
       <div className="row kg-row">
@@ -9,7 +12,7 @@ function TodoItem({ todoName, todoDate, onDeleteclick }) {
           <button
             type="button"
             className="btn btn-danger kg-button"
-            onClick={() => onDeleteclick(todoName)}
+            onClick={() => DeleteItem(todoName)}
           >
             <RiDeleteBin6Line />
           </button>
