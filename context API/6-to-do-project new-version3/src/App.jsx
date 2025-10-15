@@ -2,7 +2,7 @@ import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import Welcome from "./components/Welcome";
 import { TodoItemsContext } from "./store/todo-items-store";
 const todoItemsReducer = () => {
@@ -11,6 +11,7 @@ const todoItemsReducer = () => {
 function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
+  const [newtodoItems, dispatchTodo] = useReducer(todoItemsReducer, []);
   const addNewItem = (itemName, itemDate) => {
     setTodoItems((currrryValue) => {
       const newtodoitems = [
