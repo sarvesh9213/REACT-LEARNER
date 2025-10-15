@@ -5,7 +5,9 @@ import "./App.css";
 import { useState } from "react";
 import Welcome from "./components/Welcome";
 import { TodoItemsContext } from "./store/todo-items-store";
-
+const todoItemsReducer = () => {
+  return [];
+};
 function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
