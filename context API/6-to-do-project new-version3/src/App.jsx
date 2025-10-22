@@ -14,13 +14,13 @@ function App() {
   const [todoItems, setTodoItems] = useState(initialtodoItems);
   const [newtodoItems, dispatchTodo] = useReducer(todoItemsReducer, []);
   const addNewItem = (itemName, itemDate) => {
-    setTodoItems((currrryValue) => {
-      const newtodoitems = [
-        ...currrryValue,
-        { name: itemName, dueDate: itemDate },
-      ];
-      return newtodoitems;
-    });
+    // setTodoItems((currrryValue) => {
+    //   const newtodoitems = [
+    //     ...currrryValue,
+    //     { name: itemName, dueDate: itemDate },
+    //   ];
+    //   return newtodoitems;
+    // });
     // setTodoItems((currValue) => [
     //   ...currValue,
     //   { name: itemName, dueDate: itemDate },
