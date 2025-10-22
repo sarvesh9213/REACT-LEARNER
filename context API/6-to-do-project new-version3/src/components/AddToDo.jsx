@@ -5,7 +5,7 @@ import { TodoItemsContext } from "../store/todo-items-store";
 function AddTodo() {
   const todoNameElement = useRef();
   const dueDateElement = useRef();
-  const {} = useContext(TodoItemsContext);
+  const { addNewItem } = useContext(TodoItemsContext);
   const handleAddClick = (event) => {
     event.preventDefault();
     const todoName = todoNameElement.current.value;
