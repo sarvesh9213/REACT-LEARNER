@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <TodoItemsContext.Provider value={{ todoItems, DeleteItem }}>
+    <TodoItemsContext.Provider value={{ todoItems, addNewItem, DeleteItem }}>
       <center className="todo-container">
         <AppName />
         <AddTodo />
