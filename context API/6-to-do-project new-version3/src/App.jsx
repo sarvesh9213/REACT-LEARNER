@@ -12,8 +12,16 @@ const todoItemsReducer = () => {
 function App() {
   const initialtodoItems = [];
   const [todoItems, setTodoItems] = useState(initialtodoItems);
-  const [newtodoItems, dispatchTodo] = useReducer(todoItemsReducer, []);
+  const [newtodoItems, dispatchTodoItems] = useReducer(todoItemsReducer, []);
   const addNewItem = (itemName, itemDate) => {
+    const newItemAction = {
+      type: " New_Item",
+      payload: {
+        itemName,
+        itemDate,
+      },
+    };
+    dispatchTodoItems(newItemAction);
     // setTodoItems((currrryValue) => {
     //   const newtodoitems = [
     //     ...currrryValue,
