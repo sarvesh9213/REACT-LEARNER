@@ -5,7 +5,7 @@ import "./App.css";
 import { useReducer, useState } from "react";
 import Welcome from "./components/Welcome";
 import { TodoItemsContext } from "./store/todo-items-store";
-const todoItemsReducer = (action) => {
+const todoItemsReducer = (currToDoItems, action) => {
   // its like usestate but another type of a hook
   return [];
 };
