@@ -7,10 +7,15 @@ import Welcome from "./components/Welcome";
 import { TodoItemsContext } from "./store/todo-items-store";
 const todoItemsReducer = (currToDoItems, action) => {
   // its like usestate but another type of a hook
+  let newtodoitems = currToDoItems;
   if (action.type == "New_Item") {
+    newtodoitems = [
+      ...currToDoItems,
+      { name: action.payload.itemName, dueDate: action.payload.itemDate },
+    ];
   } else if (action.type == "DELETE_Item") {
   }
-  return [];
+  return newtodoitems;
 };
 function App() {
   const initialtodoItems = [];
